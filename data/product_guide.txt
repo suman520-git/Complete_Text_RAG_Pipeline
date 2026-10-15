@@ -1,0 +1,21 @@
+Nimbus Notes is an application for storing and searching team documents.
+
+The Starter plan supports 10 members and provides 5 GB of storage.
+
+The Team plan supports 100 members and provides 100 GB of storage.
+
+The Team plan includes semantic search and single sign-on.
+
+A workspace is a separate area for one organization. Each workspace contains projects, and each project contains documents. Members can organize documents by project so that related information is easier to find.
+
+The Starter plan includes keyword search and manual document uploads. Keyword search looks for words that appear in the stored documents. It is useful when a user knows the exact term or phrase they want to find.
+
+Semantic search compares the meaning of a question with the meaning of document passages. A question about changing credentials may find a passage about resetting a password even when the wording is different. Related passages do not always contain the answer.
+
+The Enterprise plan supports 1000 members and provides 1 TB of storage. It includes all Team features, audit-log export and a dedicated support contact. Subscription prices are not specified in these documents.
+
+Scheduled imports run every 30 minutes on Team and Enterprise. An uploaded document becomes searchable only after its import finishes. Users should check the upload status and import schedule before reporting a missing document.
+
+The public API accepts a maximum document size of 2 MB. The request limit is 60 requests per minute per workspace. Requests above this rate receive HTTP 429. The operations runbook explains how clients should retry these requests.
+
+Deleting a document removes it from normal search after the next successful import. Backup copies may remain until the backup retention period expires. The operations runbook defines that retention period.

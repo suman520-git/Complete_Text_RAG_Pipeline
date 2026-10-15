@@ -1,0 +1,38 @@
+﻿
+--- Chunking comparison ---
+
+Chunk size: 500
+Answerable questions: 12
+Mean evidence recall: 1.0
+Questions with all evidence: 12
+Average retrieved characters: 2144
+Questions with missing evidence:
+None in this test set.
+
+Chunk size: 1000
+Answerable questions: 12
+Mean evidence recall: 0.9583
+Questions with all evidence: 11
+Average retrieved characters: 3950
+Questions with missing evidence:
+Q10: What are the retention periods for backups and audit logs?
+  Missing source: security_policy.txt
+  Missing text: Audit logs are retained for 180 days.
+
+Result: Size 500 achieved higher mean evidence recall.
+
+--- Missing-answer example ---
+
+Chunk size: 500
+Question: What is the monthly price of the Team plan?
+Top source: product_guide.txt
+Top similarity: 0.8354
+The dataset contains no monthly Team price.
+Related passages cannot supply the missing price.
+
+Chunk size: 1000
+Question: What is the monthly price of the Team plan?
+Top source: product_guide.txt
+Top similarity: 0.811
+The dataset contains no monthly Team price.
+Related passages cannot supply the missing price.

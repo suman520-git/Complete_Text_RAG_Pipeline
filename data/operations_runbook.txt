@@ -1,0 +1,31 @@
+Nimbus Notes document backups run every day at 02:00 UTC.
+
+Backups are retained for 14 days.
+
+The recovery point objective is 24 hours.
+
+The recovery time objective is 4 hours.
+
+The recovery point objective describes the targeted maximum amount of recent data that could be lost after a failure.
+
+The recovery time objective describes the targeted time to restore the service.
+
+An Owner must submit a support request to recover a deleted document.
+
+Operations checks whether a suitable backup exists before attempting recovery.
+
+A restore drill is performed once every month.
+
+When an API request receives HTTP 429, the client should honor the Retry-After response header. If the header is absent, the client should use exponential backoff with jitter. Backoff increases the delay between retries, while jitter adds a random delay.
+
+A background worker imports uploaded documents. If imports stop, operators first check worker health, then the number of waiting jobs, then the error logs. A growing queue can indicate that documents are arriving faster than workers can process them.
+
+A failed import is retried at most 3 times. If it still fails after those retries, the job moves to a dead-letter queue for manual investigation. Invalid documents should be corrected before being submitted again.
+
+A liveness check verifies that the application process is running. A readiness check verifies that the application can accept requests and reach required dependencies. A running process may still be unable to serve requests when its database is unavailable.
+
+The maintenance window is Sunday from 01:00 to 02:00 UTC. Planned maintenance is announced at least 48 hours in advance. Imports may pause during maintenance, while previously indexed documents remain searchable.
+
+For a document recovery request, the Owner provides the workspace identifier, document title and estimated deletion time. Operations restores an available backup into a temporary workspace and verifies the recovered document before copying it back.
+
+A successful backup job does not prove that restoration will succeed. During the monthly restore drill, operators check document contents and confirm that recovered documents can be found through search.

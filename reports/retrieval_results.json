@@ -1,0 +1,2017 @@
+[
+  {
+    "id": 1,
+    "category": "direct",
+    "query": "How long are document backups retained?",
+    "chunk_size": 500,
+    "top_k": 5,
+    "evidence_recall": 1.0,
+    "missing_evidence": [],
+    "context_characters": 2120,
+    "results": [
+      {
+        "text": "Nimbus Notes document backups run every day at 02:00 UTC.\nBackups are retained for 14 days.\nThe recovery point objective is 24 hours.\nThe recovery time objective is 4 hours.\nThe recovery point objective describes the targeted maximum amount of recent data that could be lost after a failure.\nThe recovery time objective describes the targeted time to restore the service.\nAn Owner must submit a support request to recover a deleted document.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.8718863725662231
+      },
+      {
+        "text": "Owners must review workspace membership at least once every quarter. During employee offboarding, an Owner removes workspace membership and disables access through the identity provider. Document ownership should be transferred to another employee when necessary.\nAudit logs record sign-ins, member changes and document deletions. Audit logs provide a history of activity, while backups contain copies of document data for recovery. Their retention periods are different and should not be confused.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 5,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.8267191648483276
+      },
+      {
+        "text": "The public API accepts a maximum document size of 2 MB. The request limit is 60 requests per minute per workspace. Requests above this rate receive HTTP 429. The operations runbook explains how clients should retry these requests.\nDeleting a document removes it from normal search after the next successful import. Backup copies may remain until the backup retention period expires. The operations runbook defines that retention period.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 4,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.8253719806671143
+      },
+      {
+        "text": "Audit logs are retained for 180 days.\nAPI keys must never be committed to Git.\nSingle sign-on delegates authentication to the organization's identity provider. It centralizes account access and makes employee offboarding easier. The product guide identifies which plans include single sign-on.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.8231946229934692
+      },
+      {
+        "text": "For a document recovery request, the Owner provides the workspace identifier, document title and estimated deletion time. Operations restores an available backup into a temporary workspace and verifies the recovered document before copying it back.\nA successful backup job does not prove that restoration will succeed. During the monthly restore drill, operators check document contents and confirm that recovered documents can be found through search.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 5,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.8155398964881897
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "category": "direct",
+    "query": "How long are audit logs retained?",
+    "chunk_size": 500,
+    "top_k": 5,
+    "evidence_recall": 1.0,
+    "missing_evidence": [],
+    "context_characters": 1910,
+    "results": [
+      {
+        "text": "Audit logs are retained for 180 days.\nAPI keys must never be committed to Git.\nSingle sign-on delegates authentication to the organization's identity provider. It centralizes account access and makes employee offboarding easier. The product guide identifies which plans include single sign-on.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.8713193535804749
+      },
+      {
+        "text": "Owners must review workspace membership at least once every quarter. During employee offboarding, an Owner removes workspace membership and disables access through the identity provider. Document ownership should be transferred to another employee when necessary.\nAudit logs record sign-ins, member changes and document deletions. Audit logs provide a history of activity, while backups contain copies of document data for recovery. Their retention periods are different and should not be confused.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 5,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.8104904890060425
+      },
+      {
+        "text": "Nimbus Notes document backups run every day at 02:00 UTC.\nBackups are retained for 14 days.\nThe recovery point objective is 24 hours.\nThe recovery time objective is 4 hours.\nThe recovery point objective describes the targeted maximum amount of recent data that could be lost after a failure.\nThe recovery time objective describes the targeted time to restore the service.\nAn Owner must submit a support request to recover a deleted document.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.8082610368728638
+      },
+      {
+        "text": "The Enterprise plan supports 1000 members and provides 1 TB of storage. It includes all Team features, audit-log export and a dedicated support contact. Subscription prices are not specified in these documents.\nScheduled imports run every 30 minutes on Team and Enterprise. An uploaded document becomes searchable only after its import finishes. Users should check the upload status and import schedule before reporting a missing document.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 3,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7798138856887817
+      },
+      {
+        "text": "API keys should be stored in environment variables or a secret manager. If a key is exposed, revoke it immediately, create a replacement and review audit logs for suspicious activity. Removing the key from a source file does not revoke it.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 4,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7792646884918213
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "category": "direct",
+    "query": "How many members and how much storage does Starter support?",
+    "chunk_size": 500,
+    "top_k": 5,
+    "evidence_recall": 1.0,
+    "missing_evidence": [],
+    "context_characters": 2090,
+    "results": [
+      {
+        "text": "Nimbus Notes is an application for storing and searching team documents.\nThe Starter plan supports 10 members and provides 5 GB of storage.\nThe Team plan supports 100 members and provides 100 GB of storage.\nThe Team plan includes semantic search and single sign-on.\nA workspace is a separate area for one organization. Each workspace contains projects, and each project contains documents. Members can organize documents by project so that related information is easier to find.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.8346463441848755
+      },
+      {
+        "text": "The Enterprise plan supports 1000 members and provides 1 TB of storage. It includes all Team features, audit-log export and a dedicated support contact. Subscription prices are not specified in these documents.\nScheduled imports run every 30 minutes on Team and Enterprise. An uploaded document becomes searchable only after its import finishes. Users should check the upload status and import schedule before reporting a missing document.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 3,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.8244795799255371
+      },
+      {
+        "text": "The Starter plan includes keyword search and manual document uploads. Keyword search looks for words that appear in the stored documents. It is useful when a user knows the exact term or phrase they want to find.\nSemantic search compares the meaning of a question with the meaning of document passages. A question about changing credentials may find a passage about resetting a password even when the wording is different. Related passages do not always contain the answer.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7743859887123108
+      },
+      {
+        "text": "Nimbus Notes has three workspace roles: Owner, Editor and Viewer.\nOwners manage members and workspace settings.\nEditors create and update documents.\nViewers can read documents but cannot modify them.\nMulti-factor authentication is required for Owners.\nData in transit uses TLS 1.2 or later.\nData at rest uses AES-256 encryption.\nAudit logs are retained for 180 days.\nAPI keys must never be committed to Git.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7612018585205078
+      },
+      {
+        "text": "Audit logs are retained for 180 days.\nAPI keys must never be committed to Git.\nSingle sign-on delegates authentication to the organization's identity provider. It centralizes account access and makes employee offboarding easier. The product guide identifies which plans include single sign-on.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7538982629776001
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "category": "direct",
+    "query": "What is the maximum document size accepted by the API?",
+    "chunk_size": 500,
+    "top_k": 5,
+    "evidence_recall": 1.0,
+    "missing_evidence": [],
+    "context_characters": 2258,
+    "results": [
+      {
+        "text": "The public API accepts a maximum document size of 2 MB. The request limit is 60 requests per minute per workspace. Requests above this rate receive HTTP 429. The operations runbook explains how clients should retry these requests.\nDeleting a document removes it from normal search after the next successful import. Backup copies may remain until the backup retention period expires. The operations runbook defines that retention period.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 4,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.831070065498352
+      },
+      {
+        "text": "The Enterprise plan supports 1000 members and provides 1 TB of storage. It includes all Team features, audit-log export and a dedicated support contact. Subscription prices are not specified in these documents.\nScheduled imports run every 30 minutes on Team and Enterprise. An uploaded document becomes searchable only after its import finishes. Users should check the upload status and import schedule before reporting a missing document.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 3,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.788210391998291
+      },
+      {
+        "text": "Nimbus Notes document backups run every day at 02:00 UTC.\nBackups are retained for 14 days.\nThe recovery point objective is 24 hours.\nThe recovery time objective is 4 hours.\nThe recovery point objective describes the targeted maximum amount of recent data that could be lost after a failure.\nThe recovery time objective describes the targeted time to restore the service.\nAn Owner must submit a support request to recover a deleted document.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7740849852561951
+      },
+      {
+        "text": "Nimbus Notes is an application for storing and searching team documents.\nThe Starter plan supports 10 members and provides 5 GB of storage.\nThe Team plan supports 100 members and provides 100 GB of storage.\nThe Team plan includes semantic search and single sign-on.\nA workspace is a separate area for one organization. Each workspace contains projects, and each project contains documents. Members can organize documents by project so that related information is easier to find.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7633836269378662
+      },
+      {
+        "text": "A background worker imports uploaded documents. If imports stop, operators first check worker health, then the number of waiting jobs, then the error logs. A growing queue can indicate that documents are arriving faster than workers can process them.\nA failed import is retried at most 3 times. If it still fails after those retries, the job moves to a dead-letter queue for manual investigation. Invalid documents should be corrected before being submitted again.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 3,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7526964545249939
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "category": "direct",
+    "query": "How often is a restore drill performed?",
+    "chunk_size": 500,
+    "top_k": 5,
+    "evidence_recall": 1.0,
+    "missing_evidence": [],
+    "context_characters": 2106,
+    "results": [
+      {
+        "text": "An Owner must submit a support request to recover a deleted document.\nOperations checks whether a suitable backup exists before attempting recovery.\nA restore drill is performed once every month.\nWhen an API request receives HTTP 429, the client should honor the Retry-After response header. If the header is absent, the client should use exponential backoff with jitter. Backoff increases the delay between retries, while jitter adds a random delay.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7896884679794312
+      },
+      {
+        "text": "For a document recovery request, the Owner provides the workspace identifier, document title and estimated deletion time. Operations restores an available backup into a temporary workspace and verifies the recovered document before copying it back.\nA successful backup job does not prove that restoration will succeed. During the monthly restore drill, operators check document contents and confirm that recovered documents can be found through search.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 5,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7843019962310791
+      },
+      {
+        "text": "Nimbus Notes document backups run every day at 02:00 UTC.\nBackups are retained for 14 days.\nThe recovery point objective is 24 hours.\nThe recovery time objective is 4 hours.\nThe recovery point objective describes the targeted maximum amount of recent data that could be lost after a failure.\nThe recovery time objective describes the targeted time to restore the service.\nAn Owner must submit a support request to recover a deleted document.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7779896855354309
+      },
+      {
+        "text": "A liveness check verifies that the application process is running. A readiness check verifies that the application can accept requests and reach required dependencies. A running process may still be unable to serve requests when its database is unavailable.\nThe maintenance window is Sunday from 01:00 to 02:00 UTC. Planned maintenance is announced at least 48 hours in advance. Imports may pause during maintenance, while previously indexed documents remain searchable.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 4,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7769488096237183
+      },
+      {
+        "text": "Audit logs are retained for 180 days.\nAPI keys must never be committed to Git.\nSingle sign-on delegates authentication to the organization's identity provider. It centralizes account access and makes employee offboarding easier. The product guide identifies which plans include single sign-on.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7571051120758057
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "category": "conceptual",
+    "query": "How does semantic search differ from keyword search?",
+    "chunk_size": 500,
+    "top_k": 5,
+    "evidence_recall": 1.0,
+    "missing_evidence": [],
+    "context_characters": 2335,
+    "results": [
+      {
+        "text": "The Starter plan includes keyword search and manual document uploads. Keyword search looks for words that appear in the stored documents. It is useful when a user knows the exact term or phrase they want to find.\nSemantic search compares the meaning of a question with the meaning of document passages. A question about changing credentials may find a passage about resetting a password even when the wording is different. Related passages do not always contain the answer.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.8863191604614258
+      },
+      {
+        "text": "Authentication checks who a person is. Authorization determines what that person is allowed to do. Successfully signing in does not automatically grant permission to edit documents or manage workspace members.\nDocument permissions must be checked before search results are returned to a user. A document must not become visible merely because its content closely matches the user's question. Search relevance does not override access restrictions.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 3,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.800134539604187
+      },
+      {
+        "text": "Nimbus Notes is an application for storing and searching team documents.\nThe Starter plan supports 10 members and provides 5 GB of storage.\nThe Team plan supports 100 members and provides 100 GB of storage.\nThe Team plan includes semantic search and single sign-on.\nA workspace is a separate area for one organization. Each workspace contains projects, and each project contains documents. Members can organize documents by project so that related information is easier to find.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7683902978897095
+      },
+      {
+        "text": "The Enterprise plan supports 1000 members and provides 1 TB of storage. It includes all Team features, audit-log export and a dedicated support contact. Subscription prices are not specified in these documents.\nScheduled imports run every 30 minutes on Team and Enterprise. An uploaded document becomes searchable only after its import finishes. Users should check the upload status and import schedule before reporting a missing document.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 3,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.748445987701416
+      },
+      {
+        "text": "Owners must review workspace membership at least once every quarter. During employee offboarding, an Owner removes workspace membership and disables access through the identity provider. Document ownership should be transferred to another employee when necessary.\nAudit logs record sign-ins, member changes and document deletions. Audit logs provide a history of activity, while backups contain copies of document data for recovery. Their retention periods are different and should not be confused.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 5,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7385817766189575
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "category": "conceptual",
+    "query": "What is the difference between authentication and authorization?",
+    "chunk_size": 500,
+    "top_k": 5,
+    "evidence_recall": 1.0,
+    "missing_evidence": [],
+    "context_characters": 2118,
+    "results": [
+      {
+        "text": "Authentication checks who a person is. Authorization determines what that person is allowed to do. Successfully signing in does not automatically grant permission to edit documents or manage workspace members.\nDocument permissions must be checked before search results are returned to a user. A document must not become visible merely because its content closely matches the user's question. Search relevance does not override access restrictions.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 3,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.8655131459236145
+      },
+      {
+        "text": "Owners must review workspace membership at least once every quarter. During employee offboarding, an Owner removes workspace membership and disables access through the identity provider. Document ownership should be transferred to another employee when necessary.\nAudit logs record sign-ins, member changes and document deletions. Audit logs provide a history of activity, while backups contain copies of document data for recovery. Their retention periods are different and should not be confused.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 5,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.777429461479187
+      },
+      {
+        "text": "The Starter plan includes keyword search and manual document uploads. Keyword search looks for words that appear in the stored documents. It is useful when a user knows the exact term or phrase they want to find.\nSemantic search compares the meaning of a question with the meaning of document passages. A question about changing credentials may find a passage about resetting a password even when the wording is different. Related passages do not always contain the answer.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7674290537834167
+      },
+      {
+        "text": "Audit logs are retained for 180 days.\nAPI keys must never be committed to Git.\nSingle sign-on delegates authentication to the organization's identity provider. It centralizes account access and makes employee offboarding easier. The product guide identifies which plans include single sign-on.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7584428787231445
+      },
+      {
+        "text": "Nimbus Notes has three workspace roles: Owner, Editor and Viewer.\nOwners manage members and workspace settings.\nEditors create and update documents.\nViewers can read documents but cannot modify them.\nMulti-factor authentication is required for Owners.\nData in transit uses TLS 1.2 or later.\nData at rest uses AES-256 encryption.\nAudit logs are retained for 180 days.\nAPI keys must never be committed to Git.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7515677213668823
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "category": "conceptual",
+    "query": "How does a readiness check differ from a liveness check?",
+    "chunk_size": 500,
+    "top_k": 5,
+    "evidence_recall": 1.0,
+    "missing_evidence": [],
+    "context_characters": 2340,
+    "results": [
+      {
+        "text": "A liveness check verifies that the application process is running. A readiness check verifies that the application can accept requests and reach required dependencies. A running process may still be unable to serve requests when its database is unavailable.\nThe maintenance window is Sunday from 01:00 to 02:00 UTC. Planned maintenance is announced at least 48 hours in advance. Imports may pause during maintenance, while previously indexed documents remain searchable.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 4,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.8292678594589233
+      },
+      {
+        "text": "Authentication checks who a person is. Authorization determines what that person is allowed to do. Successfully signing in does not automatically grant permission to edit documents or manage workspace members.\nDocument permissions must be checked before search results are returned to a user. A document must not become visible merely because its content closely matches the user's question. Search relevance does not override access restrictions.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 3,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7575371265411377
+      },
+      {
+        "text": "Owners must review workspace membership at least once every quarter. During employee offboarding, an Owner removes workspace membership and disables access through the identity provider. Document ownership should be transferred to another employee when necessary.\nAudit logs record sign-ins, member changes and document deletions. Audit logs provide a history of activity, while backups contain copies of document data for recovery. Their retention periods are different and should not be confused.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 5,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7408837080001831
+      },
+      {
+        "text": "The Starter plan includes keyword search and manual document uploads. Keyword search looks for words that appear in the stored documents. It is useful when a user knows the exact term or phrase they want to find.\nSemantic search compares the meaning of a question with the meaning of document passages. A question about changing credentials may find a passage about resetting a password even when the wording is different. Related passages do not always contain the answer.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7408555746078491
+      },
+      {
+        "text": "For a document recovery request, the Owner provides the workspace identifier, document title and estimated deletion time. Operations restores an available backup into a temporary workspace and verifies the recovered document before copying it back.\nA successful backup job does not prove that restoration will succeed. During the monthly restore drill, operators check document contents and confirm that recovered documents can be found through search.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 5,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.721449613571167
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "category": "conceptual",
+    "query": "Why does a successful backup job not prove recovery will work?",
+    "chunk_size": 500,
+    "top_k": 5,
+    "evidence_recall": 1.0,
+    "missing_evidence": [],
+    "context_characters": 2305,
+    "results": [
+      {
+        "text": "For a document recovery request, the Owner provides the workspace identifier, document title and estimated deletion time. Operations restores an available backup into a temporary workspace and verifies the recovered document before copying it back.\nA successful backup job does not prove that restoration will succeed. During the monthly restore drill, operators check document contents and confirm that recovered documents can be found through search.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 5,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.8009389638900757
+      },
+      {
+        "text": "Nimbus Notes document backups run every day at 02:00 UTC.\nBackups are retained for 14 days.\nThe recovery point objective is 24 hours.\nThe recovery time objective is 4 hours.\nThe recovery point objective describes the targeted maximum amount of recent data that could be lost after a failure.\nThe recovery time objective describes the targeted time to restore the service.\nAn Owner must submit a support request to recover a deleted document.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7717773914337158
+      },
+      {
+        "text": "An Owner must submit a support request to recover a deleted document.\nOperations checks whether a suitable backup exists before attempting recovery.\nA restore drill is performed once every month.\nWhen an API request receives HTTP 429, the client should honor the Retry-After response header. If the header is absent, the client should use exponential backoff with jitter. Backoff increases the delay between retries, while jitter adds a random delay.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7570332288742065
+      },
+      {
+        "text": "A background worker imports uploaded documents. If imports stop, operators first check worker health, then the number of waiting jobs, then the error logs. A growing queue can indicate that documents are arriving faster than workers can process them.\nA failed import is retried at most 3 times. If it still fails after those retries, the job moves to a dead-letter queue for manual investigation. Invalid documents should be corrected before being submitted again.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 3,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7496131658554077
+      },
+      {
+        "text": "Owners must review workspace membership at least once every quarter. During employee offboarding, an Owner removes workspace membership and disables access through the identity provider. Document ownership should be transferred to another employee when necessary.\nAudit logs record sign-ins, member changes and document deletions. Audit logs provide a history of activity, while backups contain copies of document data for recovery. Their retention periods are different and should not be confused.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 5,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7476248741149902
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "category": "multi_document",
+    "query": "What are the retention periods for backups and audit logs?",
+    "chunk_size": 500,
+    "top_k": 5,
+    "evidence_recall": 1.0,
+    "missing_evidence": [],
+    "context_characters": 2141,
+    "results": [
+      {
+        "text": "Audit logs are retained for 180 days.\nAPI keys must never be committed to Git.\nSingle sign-on delegates authentication to the organization's identity provider. It centralizes account access and makes employee offboarding easier. The product guide identifies which plans include single sign-on.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.8547698259353638
+      },
+      {
+        "text": "Owners must review workspace membership at least once every quarter. During employee offboarding, an Owner removes workspace membership and disables access through the identity provider. Document ownership should be transferred to another employee when necessary.\nAudit logs record sign-ins, member changes and document deletions. Audit logs provide a history of activity, while backups contain copies of document data for recovery. Their retention periods are different and should not be confused.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 5,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.8353891372680664
+      },
+      {
+        "text": "Nimbus Notes document backups run every day at 02:00 UTC.\nBackups are retained for 14 days.\nThe recovery point objective is 24 hours.\nThe recovery time objective is 4 hours.\nThe recovery point objective describes the targeted maximum amount of recent data that could be lost after a failure.\nThe recovery time objective describes the targeted time to restore the service.\nAn Owner must submit a support request to recover a deleted document.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.8329835534095764
+      },
+      {
+        "text": "The Enterprise plan supports 1000 members and provides 1 TB of storage. It includes all Team features, audit-log export and a dedicated support contact. Subscription prices are not specified in these documents.\nScheduled imports run every 30 minutes on Team and Enterprise. An uploaded document becomes searchable only after its import finishes. Users should check the upload status and import schedule before reporting a missing document.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 3,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7880052328109741
+      },
+      {
+        "text": "A liveness check verifies that the application process is running. A readiness check verifies that the application can accept requests and reach required dependencies. A running process may still be unable to serve requests when its database is unavailable.\nThe maintenance window is Sunday from 01:00 to 02:00 UTC. Planned maintenance is announced at least 48 hours in advance. Imports may pause during maintenance, while previously indexed documents remain searchable.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 4,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7775579690933228
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "category": "multi_document",
+    "query": "What is the API request limit and how should clients handle HTTP 429?",
+    "chunk_size": 500,
+    "top_k": 5,
+    "evidence_recall": 1.0,
+    "missing_evidence": [],
+    "context_characters": 1826,
+    "results": [
+      {
+        "text": "The public API accepts a maximum document size of 2 MB. The request limit is 60 requests per minute per workspace. Requests above this rate receive HTTP 429. The operations runbook explains how clients should retry these requests.\nDeleting a document removes it from normal search after the next successful import. Backup copies may remain until the backup retention period expires. The operations runbook defines that retention period.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 4,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7924358248710632
+      },
+      {
+        "text": "An Owner must submit a support request to recover a deleted document.\nOperations checks whether a suitable backup exists before attempting recovery.\nA restore drill is performed once every month.\nWhen an API request receives HTTP 429, the client should honor the Retry-After response header. If the header is absent, the client should use exponential backoff with jitter. Backoff increases the delay between retries, while jitter adds a random delay.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.779971718788147
+      },
+      {
+        "text": "API keys should be stored in environment variables or a secret manager. If a key is exposed, revoke it immediately, create a replacement and review audit logs for suspicious activity. Removing the key from a source file does not revoke it.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 4,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.753393292427063
+      },
+      {
+        "text": "Security incident reports should include the workspace identifier, the approximate incident time and a description of the observed behavior. Reports must not contain passwords, API keys or complete copies of confidential documents.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 6,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7375233769416809
+      },
+      {
+        "text": "A liveness check verifies that the application process is running. A readiness check verifies that the application can accept requests and reach required dependencies. A running process may still be unable to serve requests when its database is unavailable.\nThe maintenance window is Sunday from 01:00 to 02:00 UTC. Planned maintenance is announced at least 48 hours in advance. Imports may pause during maintenance, while previously indexed documents remain searchable.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 4,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7299305200576782
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "category": "multi_document",
+    "query": "Does the Team plan include single sign-on, and why is it useful?",
+    "chunk_size": 500,
+    "top_k": 5,
+    "evidence_recall": 1.0,
+    "missing_evidence": [],
+    "context_characters": 2181,
+    "results": [
+      {
+        "text": "Audit logs are retained for 180 days.\nAPI keys must never be committed to Git.\nSingle sign-on delegates authentication to the organization's identity provider. It centralizes account access and makes employee offboarding easier. The product guide identifies which plans include single sign-on.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7985623478889465
+      },
+      {
+        "text": "Nimbus Notes is an application for storing and searching team documents.\nThe Starter plan supports 10 members and provides 5 GB of storage.\nThe Team plan supports 100 members and provides 100 GB of storage.\nThe Team plan includes semantic search and single sign-on.\nA workspace is a separate area for one organization. Each workspace contains projects, and each project contains documents. Members can organize documents by project so that related information is easier to find.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7860917448997498
+      },
+      {
+        "text": "The Starter plan includes keyword search and manual document uploads. Keyword search looks for words that appear in the stored documents. It is useful when a user knows the exact term or phrase they want to find.\nSemantic search compares the meaning of a question with the meaning of document passages. A question about changing credentials may find a passage about resetting a password even when the wording is different. Related passages do not always contain the answer.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7797279357910156
+      },
+      {
+        "text": "Owners must review workspace membership at least once every quarter. During employee offboarding, an Owner removes workspace membership and disables access through the identity provider. Document ownership should be transferred to another employee when necessary.\nAudit logs record sign-ins, member changes and document deletions. Audit logs provide a history of activity, while backups contain copies of document data for recovery. Their retention periods are different and should not be confused.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 5,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7776783108711243
+      },
+      {
+        "text": "The Enterprise plan supports 1000 members and provides 1 TB of storage. It includes all Team features, audit-log export and a dedicated support contact. Subscription prices are not specified in these documents.\nScheduled imports run every 30 minutes on Team and Enterprise. An uploaded document becomes searchable only after its import finishes. Users should check the upload status and import schedule before reporting a missing document.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 3,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7759943008422852
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "category": "unanswerable",
+    "query": "What is the monthly price of the Team plan?",
+    "chunk_size": 500,
+    "top_k": 5,
+    "evidence_recall": null,
+    "missing_evidence": [],
+    "context_characters": 2090,
+    "results": [
+      {
+        "text": "The Enterprise plan supports 1000 members and provides 1 TB of storage. It includes all Team features, audit-log export and a dedicated support contact. Subscription prices are not specified in these documents.\nScheduled imports run every 30 minutes on Team and Enterprise. An uploaded document becomes searchable only after its import finishes. Users should check the upload status and import schedule before reporting a missing document.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 3,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.8353685140609741
+      },
+      {
+        "text": "Nimbus Notes is an application for storing and searching team documents.\nThe Starter plan supports 10 members and provides 5 GB of storage.\nThe Team plan supports 100 members and provides 100 GB of storage.\nThe Team plan includes semantic search and single sign-on.\nA workspace is a separate area for one organization. Each workspace contains projects, and each project contains documents. Members can organize documents by project so that related information is easier to find.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.8053439855575562
+      },
+      {
+        "text": "Nimbus Notes has three workspace roles: Owner, Editor and Viewer.\nOwners manage members and workspace settings.\nEditors create and update documents.\nViewers can read documents but cannot modify them.\nMulti-factor authentication is required for Owners.\nData in transit uses TLS 1.2 or later.\nData at rest uses AES-256 encryption.\nAudit logs are retained for 180 days.\nAPI keys must never be committed to Git.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7430205345153809
+      },
+      {
+        "text": "Audit logs are retained for 180 days.\nAPI keys must never be committed to Git.\nSingle sign-on delegates authentication to the organization's identity provider. It centralizes account access and makes employee offboarding easier. The product guide identifies which plans include single sign-on.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7408624887466431
+      },
+      {
+        "text": "The Starter plan includes keyword search and manual document uploads. Keyword search looks for words that appear in the stored documents. It is useful when a user knows the exact term or phrase they want to find.\nSemantic search compares the meaning of a question with the meaning of document passages. A question about changing credentials may find a passage about resetting a password even when the wording is different. Related passages do not always contain the answer.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7382994890213013
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "category": "unanswerable",
+    "query": "Who is the CEO of Nimbus Notes?",
+    "chunk_size": 500,
+    "top_k": 5,
+    "evidence_recall": null,
+    "missing_evidence": [],
+    "context_characters": 2263,
+    "results": [
+      {
+        "text": "Nimbus Notes has three workspace roles: Owner, Editor and Viewer.\nOwners manage members and workspace settings.\nEditors create and update documents.\nViewers can read documents but cannot modify them.\nMulti-factor authentication is required for Owners.\nData in transit uses TLS 1.2 or later.\nData at rest uses AES-256 encryption.\nAudit logs are retained for 180 days.\nAPI keys must never be committed to Git.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.8304323554039001
+      },
+      {
+        "text": "Nimbus Notes is an application for storing and searching team documents.\nThe Starter plan supports 10 members and provides 5 GB of storage.\nThe Team plan supports 100 members and provides 100 GB of storage.\nThe Team plan includes semantic search and single sign-on.\nA workspace is a separate area for one organization. Each workspace contains projects, and each project contains documents. Members can organize documents by project so that related information is easier to find.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.822710394859314
+      },
+      {
+        "text": "Nimbus Notes document backups run every day at 02:00 UTC.\nBackups are retained for 14 days.\nThe recovery point objective is 24 hours.\nThe recovery time objective is 4 hours.\nThe recovery point objective describes the targeted maximum amount of recent data that could be lost after a failure.\nThe recovery time objective describes the targeted time to restore the service.\nAn Owner must submit a support request to recover a deleted document.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7660619020462036
+      },
+      {
+        "text": "Owners must review workspace membership at least once every quarter. During employee offboarding, an Owner removes workspace membership and disables access through the identity provider. Document ownership should be transferred to another employee when necessary.\nAudit logs record sign-ins, member changes and document deletions. Audit logs provide a history of activity, while backups contain copies of document data for recovery. Their retention periods are different and should not be confused.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 5,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7353726029396057
+      },
+      {
+        "text": "The Enterprise plan supports 1000 members and provides 1 TB of storage. It includes all Team features, audit-log export and a dedicated support contact. Subscription prices are not specified in these documents.\nScheduled imports run every 30 minutes on Team and Enterprise. An uploaded document becomes searchable only after its import finishes. Users should check the upload status and import schedule before reporting a missing document.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 3,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.730714738368988
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "category": "unanswerable",
+    "query": "Which AWS region hosts Nimbus Notes?",
+    "chunk_size": 500,
+    "top_k": 5,
+    "evidence_recall": null,
+    "missing_evidence": [],
+    "context_characters": 2235,
+    "results": [
+      {
+        "text": "Nimbus Notes has three workspace roles: Owner, Editor and Viewer.\nOwners manage members and workspace settings.\nEditors create and update documents.\nViewers can read documents but cannot modify them.\nMulti-factor authentication is required for Owners.\nData in transit uses TLS 1.2 or later.\nData at rest uses AES-256 encryption.\nAudit logs are retained for 180 days.\nAPI keys must never be committed to Git.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.8056694269180298
+      },
+      {
+        "text": "Nimbus Notes is an application for storing and searching team documents.\nThe Starter plan supports 10 members and provides 5 GB of storage.\nThe Team plan supports 100 members and provides 100 GB of storage.\nThe Team plan includes semantic search and single sign-on.\nA workspace is a separate area for one organization. Each workspace contains projects, and each project contains documents. Members can organize documents by project so that related information is easier to find.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7926243543624878
+      },
+      {
+        "text": "Nimbus Notes document backups run every day at 02:00 UTC.\nBackups are retained for 14 days.\nThe recovery point objective is 24 hours.\nThe recovery time objective is 4 hours.\nThe recovery point objective describes the targeted maximum amount of recent data that could be lost after a failure.\nThe recovery time objective describes the targeted time to restore the service.\nAn Owner must submit a support request to recover a deleted document.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7617766857147217
+      },
+      {
+        "text": "The Enterprise plan supports 1000 members and provides 1 TB of storage. It includes all Team features, audit-log export and a dedicated support contact. Subscription prices are not specified in these documents.\nScheduled imports run every 30 minutes on Team and Enterprise. An uploaded document becomes searchable only after its import finishes. Users should check the upload status and import schedule before reporting a missing document.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 3,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7172837853431702
+      },
+      {
+        "text": "A liveness check verifies that the application process is running. A readiness check verifies that the application can accept requests and reach required dependencies. A running process may still be unable to serve requests when its database is unavailable.\nThe maintenance window is Sunday from 01:00 to 02:00 UTC. Planned maintenance is announced at least 48 hours in advance. Imports may pause during maintenance, while previously indexed documents remain searchable.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 4,
+          "chunk_size": 500
+        },
+        "similarity_score": 0.7160155773162842
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "category": "direct",
+    "query": "How long are document backups retained?",
+    "chunk_size": 1000,
+    "top_k": 5,
+    "evidence_recall": 1.0,
+    "missing_evidence": [],
+    "context_characters": 4061,
+    "results": [
+      {
+        "text": "Nimbus Notes document backups run every day at 02:00 UTC.\nBackups are retained for 14 days.\nThe recovery point objective is 24 hours.\nThe recovery time objective is 4 hours.\nThe recovery point objective describes the targeted maximum amount of recent data that could be lost after a failure.\nThe recovery time objective describes the targeted time to restore the service.\nAn Owner must submit a support request to recover a deleted document.\nOperations checks whether a suitable backup exists before attempting recovery.\nA restore drill is performed once every month.\nWhen an API request receives HTTP 429, the client should honor the Retry-After response header. If the header is absent, the client should use exponential backoff with jitter. Backoff increases the delay between retries, while jitter adds a random delay.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.865652859210968
+      },
+      {
+        "text": "The Enterprise plan supports 1000 members and provides 1 TB of storage. It includes all Team features, audit-log export and a dedicated support contact. Subscription prices are not specified in these documents.\nScheduled imports run every 30 minutes on Team and Enterprise. An uploaded document becomes searchable only after its import finishes. Users should check the upload status and import schedule before reporting a missing document.\nThe public API accepts a maximum document size of 2 MB. The request limit is 60 requests per minute per workspace. Requests above this rate receive HTTP 429. The operations runbook explains how clients should retry these requests.\nDeleting a document removes it from normal search after the next successful import. Backup copies may remain until the backup retention period expires. The operations runbook defines that retention period.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.8239361047744751
+      },
+      {
+        "text": "For a document recovery request, the Owner provides the workspace identifier, document title and estimated deletion time. Operations restores an available backup into a temporary workspace and verifies the recovered document before copying it back.\nA successful backup job does not prove that restoration will succeed. During the monthly restore drill, operators check document contents and confirm that recovered documents can be found through search.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 3,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.8157058954238892
+      },
+      {
+        "text": "Document permissions must be checked before search results are returned to a user. A document must not become visible merely because its content closely matches the user's question. Search relevance does not override access restrictions.\nAPI keys should be stored in environment variables or a secret manager. If a key is exposed, revoke it immediately, create a replacement and review audit logs for suspicious activity. Removing the key from a source file does not revoke it.\nOwners must review workspace membership at least once every quarter. During employee offboarding, an Owner removes workspace membership and disables access through the identity provider. Document ownership should be transferred to another employee when necessary.\nAudit logs record sign-ins, member changes and document deletions. Audit logs provide a history of activity, while backups contain copies of document data for recovery. Their retention periods are different and should not be confused.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.8133835792541504
+      },
+      {
+        "text": "A background worker imports uploaded documents. If imports stop, operators first check worker health, then the number of waiting jobs, then the error logs. A growing queue can indicate that documents are arriving faster than workers can process them.\nA failed import is retried at most 3 times. If it still fails after those retries, the job moves to a dead-letter queue for manual investigation. Invalid documents should be corrected before being submitted again.\nA liveness check verifies that the application process is running. A readiness check verifies that the application can accept requests and reach required dependencies. A running process may still be unable to serve requests when its database is unavailable.\nThe maintenance window is Sunday from 01:00 to 02:00 UTC. Planned maintenance is announced at least 48 hours in advance. Imports may pause during maintenance, while previously indexed documents remain searchable.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7860774993896484
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "category": "direct",
+    "query": "How long are audit logs retained?",
+    "chunk_size": 1000,
+    "top_k": 5,
+    "evidence_recall": 1.0,
+    "missing_evidence": [],
+    "context_characters": 4441,
+    "results": [
+      {
+        "text": "Document permissions must be checked before search results are returned to a user. A document must not become visible merely because its content closely matches the user's question. Search relevance does not override access restrictions.\nAPI keys should be stored in environment variables or a secret manager. If a key is exposed, revoke it immediately, create a replacement and review audit logs for suspicious activity. Removing the key from a source file does not revoke it.\nOwners must review workspace membership at least once every quarter. During employee offboarding, an Owner removes workspace membership and disables access through the identity provider. Document ownership should be transferred to another employee when necessary.\nAudit logs record sign-ins, member changes and document deletions. Audit logs provide a history of activity, while backups contain copies of document data for recovery. Their retention periods are different and should not be confused.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.8003689050674438
+      },
+      {
+        "text": "Nimbus Notes document backups run every day at 02:00 UTC.\nBackups are retained for 14 days.\nThe recovery point objective is 24 hours.\nThe recovery time objective is 4 hours.\nThe recovery point objective describes the targeted maximum amount of recent data that could be lost after a failure.\nThe recovery time objective describes the targeted time to restore the service.\nAn Owner must submit a support request to recover a deleted document.\nOperations checks whether a suitable backup exists before attempting recovery.\nA restore drill is performed once every month.\nWhen an API request receives HTTP 429, the client should honor the Retry-After response header. If the header is absent, the client should use exponential backoff with jitter. Backoff increases the delay between retries, while jitter adds a random delay.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7978454828262329
+      },
+      {
+        "text": "The Enterprise plan supports 1000 members and provides 1 TB of storage. It includes all Team features, audit-log export and a dedicated support contact. Subscription prices are not specified in these documents.\nScheduled imports run every 30 minutes on Team and Enterprise. An uploaded document becomes searchable only after its import finishes. Users should check the upload status and import schedule before reporting a missing document.\nThe public API accepts a maximum document size of 2 MB. The request limit is 60 requests per minute per workspace. Requests above this rate receive HTTP 429. The operations runbook explains how clients should retry these requests.\nDeleting a document removes it from normal search after the next successful import. Backup copies may remain until the backup retention period expires. The operations runbook defines that retention period.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7738335132598877
+      },
+      {
+        "text": "A background worker imports uploaded documents. If imports stop, operators first check worker health, then the number of waiting jobs, then the error logs. A growing queue can indicate that documents are arriving faster than workers can process them.\nA failed import is retried at most 3 times. If it still fails after those retries, the job moves to a dead-letter queue for manual investigation. Invalid documents should be corrected before being submitted again.\nA liveness check verifies that the application process is running. A readiness check verifies that the application can accept requests and reach required dependencies. A running process may still be unable to serve requests when its database is unavailable.\nThe maintenance window is Sunday from 01:00 to 02:00 UTC. Planned maintenance is announced at least 48 hours in advance. Imports may pause during maintenance, while previously indexed documents remain searchable.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7579041719436646
+      },
+      {
+        "text": "Nimbus Notes has three workspace roles: Owner, Editor and Viewer.\nOwners manage members and workspace settings.\nEditors create and update documents.\nViewers can read documents but cannot modify them.\nMulti-factor authentication is required for Owners.\nData in transit uses TLS 1.2 or later.\nData at rest uses AES-256 encryption.\nAudit logs are retained for 180 days.\nAPI keys must never be committed to Git.\nSingle sign-on delegates authentication to the organization's identity provider. It centralizes account access and makes employee offboarding easier. The product guide identifies which plans include single sign-on.\nAuthentication checks who a person is. Authorization determines what that person is allowed to do. Successfully signing in does not automatically grant permission to edit documents or manage workspace members.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7543454766273499
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "category": "direct",
+    "query": "How many members and how much storage does Starter support?",
+    "chunk_size": 1000,
+    "top_k": 5,
+    "evidence_recall": 1.0,
+    "missing_evidence": [],
+    "context_characters": 4458,
+    "results": [
+      {
+        "text": "Nimbus Notes is an application for storing and searching team documents.\nThe Starter plan supports 10 members and provides 5 GB of storage.\nThe Team plan supports 100 members and provides 100 GB of storage.\nThe Team plan includes semantic search and single sign-on.\nA workspace is a separate area for one organization. Each workspace contains projects, and each project contains documents. Members can organize documents by project so that related information is easier to find.\nThe Starter plan includes keyword search and manual document uploads. Keyword search looks for words that appear in the stored documents. It is useful when a user knows the exact term or phrase they want to find.\nSemantic search compares the meaning of a question with the meaning of document passages. A question about changing credentials may find a passage about resetting a password even when the wording is different. Related passages do not always contain the answer.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.8355617523193359
+      },
+      {
+        "text": "The Enterprise plan supports 1000 members and provides 1 TB of storage. It includes all Team features, audit-log export and a dedicated support contact. Subscription prices are not specified in these documents.\nScheduled imports run every 30 minutes on Team and Enterprise. An uploaded document becomes searchable only after its import finishes. Users should check the upload status and import schedule before reporting a missing document.\nThe public API accepts a maximum document size of 2 MB. The request limit is 60 requests per minute per workspace. Requests above this rate receive HTTP 429. The operations runbook explains how clients should retry these requests.\nDeleting a document removes it from normal search after the next successful import. Backup copies may remain until the backup retention period expires. The operations runbook defines that retention period.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.810957670211792
+      },
+      {
+        "text": "Nimbus Notes has three workspace roles: Owner, Editor and Viewer.\nOwners manage members and workspace settings.\nEditors create and update documents.\nViewers can read documents but cannot modify them.\nMulti-factor authentication is required for Owners.\nData in transit uses TLS 1.2 or later.\nData at rest uses AES-256 encryption.\nAudit logs are retained for 180 days.\nAPI keys must never be committed to Git.\nSingle sign-on delegates authentication to the organization's identity provider. It centralizes account access and makes employee offboarding easier. The product guide identifies which plans include single sign-on.\nAuthentication checks who a person is. Authorization determines what that person is allowed to do. Successfully signing in does not automatically grant permission to edit documents or manage workspace members.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7642769813537598
+      },
+      {
+        "text": "Document permissions must be checked before search results are returned to a user. A document must not become visible merely because its content closely matches the user's question. Search relevance does not override access restrictions.\nAPI keys should be stored in environment variables or a secret manager. If a key is exposed, revoke it immediately, create a replacement and review audit logs for suspicious activity. Removing the key from a source file does not revoke it.\nOwners must review workspace membership at least once every quarter. During employee offboarding, an Owner removes workspace membership and disables access through the identity provider. Document ownership should be transferred to another employee when necessary.\nAudit logs record sign-ins, member changes and document deletions. Audit logs provide a history of activity, while backups contain copies of document data for recovery. Their retention periods are different and should not be confused.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7400487661361694
+      },
+      {
+        "text": "Nimbus Notes document backups run every day at 02:00 UTC.\nBackups are retained for 14 days.\nThe recovery point objective is 24 hours.\nThe recovery time objective is 4 hours.\nThe recovery point objective describes the targeted maximum amount of recent data that could be lost after a failure.\nThe recovery time objective describes the targeted time to restore the service.\nAn Owner must submit a support request to recover a deleted document.\nOperations checks whether a suitable backup exists before attempting recovery.\nA restore drill is performed once every month.\nWhen an API request receives HTTP 429, the client should honor the Retry-After response header. If the header is absent, the client should use exponential backoff with jitter. Backoff increases the delay between retries, while jitter adds a random delay.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.730847954750061
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "category": "direct",
+    "query": "What is the maximum document size accepted by the API?",
+    "chunk_size": 1000,
+    "top_k": 5,
+    "evidence_recall": 1.0,
+    "missing_evidence": [],
+    "context_characters": 4458,
+    "results": [
+      {
+        "text": "The Enterprise plan supports 1000 members and provides 1 TB of storage. It includes all Team features, audit-log export and a dedicated support contact. Subscription prices are not specified in these documents.\nScheduled imports run every 30 minutes on Team and Enterprise. An uploaded document becomes searchable only after its import finishes. Users should check the upload status and import schedule before reporting a missing document.\nThe public API accepts a maximum document size of 2 MB. The request limit is 60 requests per minute per workspace. Requests above this rate receive HTTP 429. The operations runbook explains how clients should retry these requests.\nDeleting a document removes it from normal search after the next successful import. Backup copies may remain until the backup retention period expires. The operations runbook defines that retention period.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.8171416521072388
+      },
+      {
+        "text": "Nimbus Notes document backups run every day at 02:00 UTC.\nBackups are retained for 14 days.\nThe recovery point objective is 24 hours.\nThe recovery time objective is 4 hours.\nThe recovery point objective describes the targeted maximum amount of recent data that could be lost after a failure.\nThe recovery time objective describes the targeted time to restore the service.\nAn Owner must submit a support request to recover a deleted document.\nOperations checks whether a suitable backup exists before attempting recovery.\nA restore drill is performed once every month.\nWhen an API request receives HTTP 429, the client should honor the Retry-After response header. If the header is absent, the client should use exponential backoff with jitter. Backoff increases the delay between retries, while jitter adds a random delay.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7782034873962402
+      },
+      {
+        "text": "Nimbus Notes is an application for storing and searching team documents.\nThe Starter plan supports 10 members and provides 5 GB of storage.\nThe Team plan supports 100 members and provides 100 GB of storage.\nThe Team plan includes semantic search and single sign-on.\nA workspace is a separate area for one organization. Each workspace contains projects, and each project contains documents. Members can organize documents by project so that related information is easier to find.\nThe Starter plan includes keyword search and manual document uploads. Keyword search looks for words that appear in the stored documents. It is useful when a user knows the exact term or phrase they want to find.\nSemantic search compares the meaning of a question with the meaning of document passages. A question about changing credentials may find a passage about resetting a password even when the wording is different. Related passages do not always contain the answer.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.765580415725708
+      },
+      {
+        "text": "Document permissions must be checked before search results are returned to a user. A document must not become visible merely because its content closely matches the user's question. Search relevance does not override access restrictions.\nAPI keys should be stored in environment variables or a secret manager. If a key is exposed, revoke it immediately, create a replacement and review audit logs for suspicious activity. Removing the key from a source file does not revoke it.\nOwners must review workspace membership at least once every quarter. During employee offboarding, an Owner removes workspace membership and disables access through the identity provider. Document ownership should be transferred to another employee when necessary.\nAudit logs record sign-ins, member changes and document deletions. Audit logs provide a history of activity, while backups contain copies of document data for recovery. Their retention periods are different and should not be confused.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7612771391868591
+      },
+      {
+        "text": "Nimbus Notes has three workspace roles: Owner, Editor and Viewer.\nOwners manage members and workspace settings.\nEditors create and update documents.\nViewers can read documents but cannot modify them.\nMulti-factor authentication is required for Owners.\nData in transit uses TLS 1.2 or later.\nData at rest uses AES-256 encryption.\nAudit logs are retained for 180 days.\nAPI keys must never be committed to Git.\nSingle sign-on delegates authentication to the organization's identity provider. It centralizes account access and makes employee offboarding easier. The product guide identifies which plans include single sign-on.\nAuthentication checks who a person is. Authorization determines what that person is allowed to do. Successfully signing in does not automatically grant permission to edit documents or manage workspace members.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7468603253364563
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "category": "direct",
+    "query": "How often is a restore drill performed?",
+    "chunk_size": 1000,
+    "top_k": 5,
+    "evidence_recall": 1.0,
+    "missing_evidence": [],
+    "context_characters": 4061,
+    "results": [
+      {
+        "text": "Nimbus Notes document backups run every day at 02:00 UTC.\nBackups are retained for 14 days.\nThe recovery point objective is 24 hours.\nThe recovery time objective is 4 hours.\nThe recovery point objective describes the targeted maximum amount of recent data that could be lost after a failure.\nThe recovery time objective describes the targeted time to restore the service.\nAn Owner must submit a support request to recover a deleted document.\nOperations checks whether a suitable backup exists before attempting recovery.\nA restore drill is performed once every month.\nWhen an API request receives HTTP 429, the client should honor the Retry-After response header. If the header is absent, the client should use exponential backoff with jitter. Backoff increases the delay between retries, while jitter adds a random delay.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7899399995803833
+      },
+      {
+        "text": "For a document recovery request, the Owner provides the workspace identifier, document title and estimated deletion time. Operations restores an available backup into a temporary workspace and verifies the recovered document before copying it back.\nA successful backup job does not prove that restoration will succeed. During the monthly restore drill, operators check document contents and confirm that recovered documents can be found through search.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 3,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7843680381774902
+      },
+      {
+        "text": "A background worker imports uploaded documents. If imports stop, operators first check worker health, then the number of waiting jobs, then the error logs. A growing queue can indicate that documents are arriving faster than workers can process them.\nA failed import is retried at most 3 times. If it still fails after those retries, the job moves to a dead-letter queue for manual investigation. Invalid documents should be corrected before being submitted again.\nA liveness check verifies that the application process is running. A readiness check verifies that the application can accept requests and reach required dependencies. A running process may still be unable to serve requests when its database is unavailable.\nThe maintenance window is Sunday from 01:00 to 02:00 UTC. Planned maintenance is announced at least 48 hours in advance. Imports may pause during maintenance, while previously indexed documents remain searchable.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.757066011428833
+      },
+      {
+        "text": "Document permissions must be checked before search results are returned to a user. A document must not become visible merely because its content closely matches the user's question. Search relevance does not override access restrictions.\nAPI keys should be stored in environment variables or a secret manager. If a key is exposed, revoke it immediately, create a replacement and review audit logs for suspicious activity. Removing the key from a source file does not revoke it.\nOwners must review workspace membership at least once every quarter. During employee offboarding, an Owner removes workspace membership and disables access through the identity provider. Document ownership should be transferred to another employee when necessary.\nAudit logs record sign-ins, member changes and document deletions. Audit logs provide a history of activity, while backups contain copies of document data for recovery. Their retention periods are different and should not be confused.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7442699074745178
+      },
+      {
+        "text": "The Enterprise plan supports 1000 members and provides 1 TB of storage. It includes all Team features, audit-log export and a dedicated support contact. Subscription prices are not specified in these documents.\nScheduled imports run every 30 minutes on Team and Enterprise. An uploaded document becomes searchable only after its import finishes. Users should check the upload status and import schedule before reporting a missing document.\nThe public API accepts a maximum document size of 2 MB. The request limit is 60 requests per minute per workspace. Requests above this rate receive HTTP 429. The operations runbook explains how clients should retry these requests.\nDeleting a document removes it from normal search after the next successful import. Backup copies may remain until the backup retention period expires. The operations runbook defines that retention period.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7374367713928223
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "category": "conceptual",
+    "query": "How does semantic search differ from keyword search?",
+    "chunk_size": 1000,
+    "top_k": 5,
+    "evidence_recall": 1.0,
+    "missing_evidence": [],
+    "context_characters": 3867,
+    "results": [
+      {
+        "text": "Nimbus Notes is an application for storing and searching team documents.\nThe Starter plan supports 10 members and provides 5 GB of storage.\nThe Team plan supports 100 members and provides 100 GB of storage.\nThe Team plan includes semantic search and single sign-on.\nA workspace is a separate area for one organization. Each workspace contains projects, and each project contains documents. Members can organize documents by project so that related information is easier to find.\nThe Starter plan includes keyword search and manual document uploads. Keyword search looks for words that appear in the stored documents. It is useful when a user knows the exact term or phrase they want to find.\nSemantic search compares the meaning of a question with the meaning of document passages. A question about changing credentials may find a passage about resetting a password even when the wording is different. Related passages do not always contain the answer.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.8087911605834961
+      },
+      {
+        "text": "Document permissions must be checked before search results are returned to a user. A document must not become visible merely because its content closely matches the user's question. Search relevance does not override access restrictions.\nAPI keys should be stored in environment variables or a secret manager. If a key is exposed, revoke it immediately, create a replacement and review audit logs for suspicious activity. Removing the key from a source file does not revoke it.\nOwners must review workspace membership at least once every quarter. During employee offboarding, an Owner removes workspace membership and disables access through the identity provider. Document ownership should be transferred to another employee when necessary.\nAudit logs record sign-ins, member changes and document deletions. Audit logs provide a history of activity, while backups contain copies of document data for recovery. Their retention periods are different and should not be confused.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7949807643890381
+      },
+      {
+        "text": "The Enterprise plan supports 1000 members and provides 1 TB of storage. It includes all Team features, audit-log export and a dedicated support contact. Subscription prices are not specified in these documents.\nScheduled imports run every 30 minutes on Team and Enterprise. An uploaded document becomes searchable only after its import finishes. Users should check the upload status and import schedule before reporting a missing document.\nThe public API accepts a maximum document size of 2 MB. The request limit is 60 requests per minute per workspace. Requests above this rate receive HTTP 429. The operations runbook explains how clients should retry these requests.\nDeleting a document removes it from normal search after the next successful import. Backup copies may remain until the backup retention period expires. The operations runbook defines that retention period.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7424333095550537
+      },
+      {
+        "text": "Nimbus Notes has three workspace roles: Owner, Editor and Viewer.\nOwners manage members and workspace settings.\nEditors create and update documents.\nViewers can read documents but cannot modify them.\nMulti-factor authentication is required for Owners.\nData in transit uses TLS 1.2 or later.\nData at rest uses AES-256 encryption.\nAudit logs are retained for 180 days.\nAPI keys must never be committed to Git.\nSingle sign-on delegates authentication to the organization's identity provider. It centralizes account access and makes employee offboarding easier. The product guide identifies which plans include single sign-on.\nAuthentication checks who a person is. Authorization determines what that person is allowed to do. Successfully signing in does not automatically grant permission to edit documents or manage workspace members.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7402116060256958
+      },
+      {
+        "text": "Security incident reports should include the workspace identifier, the approximate incident time and a description of the observed behavior. Reports must not contain passwords, API keys or complete copies of confidential documents.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 3,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7326779961585999
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "category": "conceptual",
+    "query": "What is the difference between authentication and authorization?",
+    "chunk_size": 1000,
+    "top_k": 5,
+    "evidence_recall": 1.0,
+    "missing_evidence": [],
+    "context_characters": 3443,
+    "results": [
+      {
+        "text": "Nimbus Notes has three workspace roles: Owner, Editor and Viewer.\nOwners manage members and workspace settings.\nEditors create and update documents.\nViewers can read documents but cannot modify them.\nMulti-factor authentication is required for Owners.\nData in transit uses TLS 1.2 or later.\nData at rest uses AES-256 encryption.\nAudit logs are retained for 180 days.\nAPI keys must never be committed to Git.\nSingle sign-on delegates authentication to the organization's identity provider. It centralizes account access and makes employee offboarding easier. The product guide identifies which plans include single sign-on.\nAuthentication checks who a person is. Authorization determines what that person is allowed to do. Successfully signing in does not automatically grant permission to edit documents or manage workspace members.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7879009246826172
+      },
+      {
+        "text": "Document permissions must be checked before search results are returned to a user. A document must not become visible merely because its content closely matches the user's question. Search relevance does not override access restrictions.\nAPI keys should be stored in environment variables or a secret manager. If a key is exposed, revoke it immediately, create a replacement and review audit logs for suspicious activity. Removing the key from a source file does not revoke it.\nOwners must review workspace membership at least once every quarter. During employee offboarding, an Owner removes workspace membership and disables access through the identity provider. Document ownership should be transferred to another employee when necessary.\nAudit logs record sign-ins, member changes and document deletions. Audit logs provide a history of activity, while backups contain copies of document data for recovery. Their retention periods are different and should not be confused.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7840242385864258
+      },
+      {
+        "text": "Security incident reports should include the workspace identifier, the approximate incident time and a description of the observed behavior. Reports must not contain passwords, API keys or complete copies of confidential documents.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 3,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7410179376602173
+      },
+      {
+        "text": "Nimbus Notes is an application for storing and searching team documents.\nThe Starter plan supports 10 members and provides 5 GB of storage.\nThe Team plan supports 100 members and provides 100 GB of storage.\nThe Team plan includes semantic search and single sign-on.\nA workspace is a separate area for one organization. Each workspace contains projects, and each project contains documents. Members can organize documents by project so that related information is easier to find.\nThe Starter plan includes keyword search and manual document uploads. Keyword search looks for words that appear in the stored documents. It is useful when a user knows the exact term or phrase they want to find.\nSemantic search compares the meaning of a question with the meaning of document passages. A question about changing credentials may find a passage about resetting a password even when the wording is different. Related passages do not always contain the answer.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7200591564178467
+      },
+      {
+        "text": "For a document recovery request, the Owner provides the workspace identifier, document title and estimated deletion time. Operations restores an available backup into a temporary workspace and verifies the recovered document before copying it back.\nA successful backup job does not prove that restoration will succeed. During the monthly restore drill, operators check document contents and confirm that recovered documents can be found through search.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 3,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7013224959373474
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "category": "conceptual",
+    "query": "How does a readiness check differ from a liveness check?",
+    "chunk_size": 1000,
+    "top_k": 5,
+    "evidence_recall": 1.0,
+    "missing_evidence": [],
+    "context_characters": 3426,
+    "results": [
+      {
+        "text": "A background worker imports uploaded documents. If imports stop, operators first check worker health, then the number of waiting jobs, then the error logs. A growing queue can indicate that documents are arriving faster than workers can process them.\nA failed import is retried at most 3 times. If it still fails after those retries, the job moves to a dead-letter queue for manual investigation. Invalid documents should be corrected before being submitted again.\nA liveness check verifies that the application process is running. A readiness check verifies that the application can accept requests and reach required dependencies. A running process may still be unable to serve requests when its database is unavailable.\nThe maintenance window is Sunday from 01:00 to 02:00 UTC. Planned maintenance is announced at least 48 hours in advance. Imports may pause during maintenance, while previously indexed documents remain searchable.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7960719466209412
+      },
+      {
+        "text": "Document permissions must be checked before search results are returned to a user. A document must not become visible merely because its content closely matches the user's question. Search relevance does not override access restrictions.\nAPI keys should be stored in environment variables or a secret manager. If a key is exposed, revoke it immediately, create a replacement and review audit logs for suspicious activity. Removing the key from a source file does not revoke it.\nOwners must review workspace membership at least once every quarter. During employee offboarding, an Owner removes workspace membership and disables access through the identity provider. Document ownership should be transferred to another employee when necessary.\nAudit logs record sign-ins, member changes and document deletions. Audit logs provide a history of activity, while backups contain copies of document data for recovery. Their retention periods are different and should not be confused.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7474086880683899
+      },
+      {
+        "text": "For a document recovery request, the Owner provides the workspace identifier, document title and estimated deletion time. Operations restores an available backup into a temporary workspace and verifies the recovered document before copying it back.\nA successful backup job does not prove that restoration will succeed. During the monthly restore drill, operators check document contents and confirm that recovered documents can be found through search.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 3,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.721720814704895
+      },
+      {
+        "text": "Nimbus Notes has three workspace roles: Owner, Editor and Viewer.\nOwners manage members and workspace settings.\nEditors create and update documents.\nViewers can read documents but cannot modify them.\nMulti-factor authentication is required for Owners.\nData in transit uses TLS 1.2 or later.\nData at rest uses AES-256 encryption.\nAudit logs are retained for 180 days.\nAPI keys must never be committed to Git.\nSingle sign-on delegates authentication to the organization's identity provider. It centralizes account access and makes employee offboarding easier. The product guide identifies which plans include single sign-on.\nAuthentication checks who a person is. Authorization determines what that person is allowed to do. Successfully signing in does not automatically grant permission to edit documents or manage workspace members.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7116590142250061
+      },
+      {
+        "text": "Security incident reports should include the workspace identifier, the approximate incident time and a description of the observed behavior. Reports must not contain passwords, API keys or complete copies of confidential documents.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 3,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7097087502479553
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "category": "conceptual",
+    "query": "Why does a successful backup job not prove recovery will work?",
+    "chunk_size": 1000,
+    "top_k": 5,
+    "evidence_recall": 1.0,
+    "missing_evidence": [],
+    "context_characters": 3416,
+    "results": [
+      {
+        "text": "For a document recovery request, the Owner provides the workspace identifier, document title and estimated deletion time. Operations restores an available backup into a temporary workspace and verifies the recovered document before copying it back.\nA successful backup job does not prove that restoration will succeed. During the monthly restore drill, operators check document contents and confirm that recovered documents can be found through search.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 3,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.8010426759719849
+      },
+      {
+        "text": "Nimbus Notes document backups run every day at 02:00 UTC.\nBackups are retained for 14 days.\nThe recovery point objective is 24 hours.\nThe recovery time objective is 4 hours.\nThe recovery point objective describes the targeted maximum amount of recent data that could be lost after a failure.\nThe recovery time objective describes the targeted time to restore the service.\nAn Owner must submit a support request to recover a deleted document.\nOperations checks whether a suitable backup exists before attempting recovery.\nA restore drill is performed once every month.\nWhen an API request receives HTTP 429, the client should honor the Retry-After response header. If the header is absent, the client should use exponential backoff with jitter. Backoff increases the delay between retries, while jitter adds a random delay.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7714167237281799
+      },
+      {
+        "text": "A background worker imports uploaded documents. If imports stop, operators first check worker health, then the number of waiting jobs, then the error logs. A growing queue can indicate that documents are arriving faster than workers can process them.\nA failed import is retried at most 3 times. If it still fails after those retries, the job moves to a dead-letter queue for manual investigation. Invalid documents should be corrected before being submitted again.\nA liveness check verifies that the application process is running. A readiness check verifies that the application can accept requests and reach required dependencies. A running process may still be unable to serve requests when its database is unavailable.\nThe maintenance window is Sunday from 01:00 to 02:00 UTC. Planned maintenance is announced at least 48 hours in advance. Imports may pause during maintenance, while previously indexed documents remain searchable.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7446334362030029
+      },
+      {
+        "text": "Document permissions must be checked before search results are returned to a user. A document must not become visible merely because its content closely matches the user's question. Search relevance does not override access restrictions.\nAPI keys should be stored in environment variables or a secret manager. If a key is exposed, revoke it immediately, create a replacement and review audit logs for suspicious activity. Removing the key from a source file does not revoke it.\nOwners must review workspace membership at least once every quarter. During employee offboarding, an Owner removes workspace membership and disables access through the identity provider. Document ownership should be transferred to another employee when necessary.\nAudit logs record sign-ins, member changes and document deletions. Audit logs provide a history of activity, while backups contain copies of document data for recovery. Their retention periods are different and should not be confused.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7390225529670715
+      },
+      {
+        "text": "Security incident reports should include the workspace identifier, the approximate incident time and a description of the observed behavior. Reports must not contain passwords, API keys or complete copies of confidential documents.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 3,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7199690937995911
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "category": "multi_document",
+    "query": "What are the retention periods for backups and audit logs?",
+    "chunk_size": 1000,
+    "top_k": 5,
+    "evidence_recall": 0.5,
+    "missing_evidence": [
+      {
+        "source": "security_policy.txt",
+        "text": "Audit logs are retained for 180 days."
+      }
+    ],
+    "context_characters": 4061,
+    "results": [
+      {
+        "text": "Nimbus Notes document backups run every day at 02:00 UTC.\nBackups are retained for 14 days.\nThe recovery point objective is 24 hours.\nThe recovery time objective is 4 hours.\nThe recovery point objective describes the targeted maximum amount of recent data that could be lost after a failure.\nThe recovery time objective describes the targeted time to restore the service.\nAn Owner must submit a support request to recover a deleted document.\nOperations checks whether a suitable backup exists before attempting recovery.\nA restore drill is performed once every month.\nWhen an API request receives HTTP 429, the client should honor the Retry-After response header. If the header is absent, the client should use exponential backoff with jitter. Backoff increases the delay between retries, while jitter adds a random delay.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.8244426846504211
+      },
+      {
+        "text": "Document permissions must be checked before search results are returned to a user. A document must not become visible merely because its content closely matches the user's question. Search relevance does not override access restrictions.\nAPI keys should be stored in environment variables or a secret manager. If a key is exposed, revoke it immediately, create a replacement and review audit logs for suspicious activity. Removing the key from a source file does not revoke it.\nOwners must review workspace membership at least once every quarter. During employee offboarding, an Owner removes workspace membership and disables access through the identity provider. Document ownership should be transferred to another employee when necessary.\nAudit logs record sign-ins, member changes and document deletions. Audit logs provide a history of activity, while backups contain copies of document data for recovery. Their retention periods are different and should not be confused.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.8157153725624084
+      },
+      {
+        "text": "The Enterprise plan supports 1000 members and provides 1 TB of storage. It includes all Team features, audit-log export and a dedicated support contact. Subscription prices are not specified in these documents.\nScheduled imports run every 30 minutes on Team and Enterprise. An uploaded document becomes searchable only after its import finishes. Users should check the upload status and import schedule before reporting a missing document.\nThe public API accepts a maximum document size of 2 MB. The request limit is 60 requests per minute per workspace. Requests above this rate receive HTTP 429. The operations runbook explains how clients should retry these requests.\nDeleting a document removes it from normal search after the next successful import. Backup copies may remain until the backup retention period expires. The operations runbook defines that retention period.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7902120351791382
+      },
+      {
+        "text": "A background worker imports uploaded documents. If imports stop, operators first check worker health, then the number of waiting jobs, then the error logs. A growing queue can indicate that documents are arriving faster than workers can process them.\nA failed import is retried at most 3 times. If it still fails after those retries, the job moves to a dead-letter queue for manual investigation. Invalid documents should be corrected before being submitted again.\nA liveness check verifies that the application process is running. A readiness check verifies that the application can accept requests and reach required dependencies. A running process may still be unable to serve requests when its database is unavailable.\nThe maintenance window is Sunday from 01:00 to 02:00 UTC. Planned maintenance is announced at least 48 hours in advance. Imports may pause during maintenance, while previously indexed documents remain searchable.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7681068181991577
+      },
+      {
+        "text": "For a document recovery request, the Owner provides the workspace identifier, document title and estimated deletion time. Operations restores an available backup into a temporary workspace and verifies the recovered document before copying it back.\nA successful backup job does not prove that restoration will succeed. During the monthly restore drill, operators check document contents and confirm that recovered documents can be found through search.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 3,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7662773132324219
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "category": "multi_document",
+    "query": "What is the API request limit and how should clients handle HTTP 429?",
+    "chunk_size": 1000,
+    "top_k": 5,
+    "evidence_recall": 1.0,
+    "missing_evidence": [],
+    "context_characters": 3840,
+    "results": [
+      {
+        "text": "The Enterprise plan supports 1000 members and provides 1 TB of storage. It includes all Team features, audit-log export and a dedicated support contact. Subscription prices are not specified in these documents.\nScheduled imports run every 30 minutes on Team and Enterprise. An uploaded document becomes searchable only after its import finishes. Users should check the upload status and import schedule before reporting a missing document.\nThe public API accepts a maximum document size of 2 MB. The request limit is 60 requests per minute per workspace. Requests above this rate receive HTTP 429. The operations runbook explains how clients should retry these requests.\nDeleting a document removes it from normal search after the next successful import. Backup copies may remain until the backup retention period expires. The operations runbook defines that retention period.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7604067921638489
+      },
+      {
+        "text": "Nimbus Notes document backups run every day at 02:00 UTC.\nBackups are retained for 14 days.\nThe recovery point objective is 24 hours.\nThe recovery time objective is 4 hours.\nThe recovery point objective describes the targeted maximum amount of recent data that could be lost after a failure.\nThe recovery time objective describes the targeted time to restore the service.\nAn Owner must submit a support request to recover a deleted document.\nOperations checks whether a suitable backup exists before attempting recovery.\nA restore drill is performed once every month.\nWhen an API request receives HTTP 429, the client should honor the Retry-After response header. If the header is absent, the client should use exponential backoff with jitter. Backoff increases the delay between retries, while jitter adds a random delay.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7544466257095337
+      },
+      {
+        "text": "Security incident reports should include the workspace identifier, the approximate incident time and a description of the observed behavior. Reports must not contain passwords, API keys or complete copies of confidential documents.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 3,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7375485301017761
+      },
+      {
+        "text": "Document permissions must be checked before search results are returned to a user. A document must not become visible merely because its content closely matches the user's question. Search relevance does not override access restrictions.\nAPI keys should be stored in environment variables or a secret manager. If a key is exposed, revoke it immediately, create a replacement and review audit logs for suspicious activity. Removing the key from a source file does not revoke it.\nOwners must review workspace membership at least once every quarter. During employee offboarding, an Owner removes workspace membership and disables access through the identity provider. Document ownership should be transferred to another employee when necessary.\nAudit logs record sign-ins, member changes and document deletions. Audit logs provide a history of activity, while backups contain copies of document data for recovery. Their retention periods are different and should not be confused.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7364073991775513
+      },
+      {
+        "text": "A background worker imports uploaded documents. If imports stop, operators first check worker health, then the number of waiting jobs, then the error logs. A growing queue can indicate that documents are arriving faster than workers can process them.\nA failed import is retried at most 3 times. If it still fails after those retries, the job moves to a dead-letter queue for manual investigation. Invalid documents should be corrected before being submitted again.\nA liveness check verifies that the application process is running. A readiness check verifies that the application can accept requests and reach required dependencies. A running process may still be unable to serve requests when its database is unavailable.\nThe maintenance window is Sunday from 01:00 to 02:00 UTC. Planned maintenance is announced at least 48 hours in advance. Imports may pause during maintenance, while previously indexed documents remain searchable.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7254804372787476
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "category": "multi_document",
+    "query": "Does the Team plan include single sign-on, and why is it useful?",
+    "chunk_size": 1000,
+    "top_k": 5,
+    "evidence_recall": 1.0,
+    "missing_evidence": [],
+    "context_characters": 3867,
+    "results": [
+      {
+        "text": "Nimbus Notes has three workspace roles: Owner, Editor and Viewer.\nOwners manage members and workspace settings.\nEditors create and update documents.\nViewers can read documents but cannot modify them.\nMulti-factor authentication is required for Owners.\nData in transit uses TLS 1.2 or later.\nData at rest uses AES-256 encryption.\nAudit logs are retained for 180 days.\nAPI keys must never be committed to Git.\nSingle sign-on delegates authentication to the organization's identity provider. It centralizes account access and makes employee offboarding easier. The product guide identifies which plans include single sign-on.\nAuthentication checks who a person is. Authorization determines what that person is allowed to do. Successfully signing in does not automatically grant permission to edit documents or manage workspace members.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7937658429145813
+      },
+      {
+        "text": "Nimbus Notes is an application for storing and searching team documents.\nThe Starter plan supports 10 members and provides 5 GB of storage.\nThe Team plan supports 100 members and provides 100 GB of storage.\nThe Team plan includes semantic search and single sign-on.\nA workspace is a separate area for one organization. Each workspace contains projects, and each project contains documents. Members can organize documents by project so that related information is easier to find.\nThe Starter plan includes keyword search and manual document uploads. Keyword search looks for words that appear in the stored documents. It is useful when a user knows the exact term or phrase they want to find.\nSemantic search compares the meaning of a question with the meaning of document passages. A question about changing credentials may find a passage about resetting a password even when the wording is different. Related passages do not always contain the answer.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7898574471473694
+      },
+      {
+        "text": "Document permissions must be checked before search results are returned to a user. A document must not become visible merely because its content closely matches the user's question. Search relevance does not override access restrictions.\nAPI keys should be stored in environment variables or a secret manager. If a key is exposed, revoke it immediately, create a replacement and review audit logs for suspicious activity. Removing the key from a source file does not revoke it.\nOwners must review workspace membership at least once every quarter. During employee offboarding, an Owner removes workspace membership and disables access through the identity provider. Document ownership should be transferred to another employee when necessary.\nAudit logs record sign-ins, member changes and document deletions. Audit logs provide a history of activity, while backups contain copies of document data for recovery. Their retention periods are different and should not be confused.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.763005256652832
+      },
+      {
+        "text": "The Enterprise plan supports 1000 members and provides 1 TB of storage. It includes all Team features, audit-log export and a dedicated support contact. Subscription prices are not specified in these documents.\nScheduled imports run every 30 minutes on Team and Enterprise. An uploaded document becomes searchable only after its import finishes. Users should check the upload status and import schedule before reporting a missing document.\nThe public API accepts a maximum document size of 2 MB. The request limit is 60 requests per minute per workspace. Requests above this rate receive HTTP 429. The operations runbook explains how clients should retry these requests.\nDeleting a document removes it from normal search after the next successful import. Backup copies may remain until the backup retention period expires. The operations runbook defines that retention period.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7514588832855225
+      },
+      {
+        "text": "Security incident reports should include the workspace identifier, the approximate incident time and a description of the observed behavior. Reports must not contain passwords, API keys or complete copies of confidential documents.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 3,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7319260835647583
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "category": "unanswerable",
+    "query": "What is the monthly price of the Team plan?",
+    "chunk_size": 1000,
+    "top_k": 5,
+    "evidence_recall": null,
+    "missing_evidence": [],
+    "context_characters": 4458,
+    "results": [
+      {
+        "text": "The Enterprise plan supports 1000 members and provides 1 TB of storage. It includes all Team features, audit-log export and a dedicated support contact. Subscription prices are not specified in these documents.\nScheduled imports run every 30 minutes on Team and Enterprise. An uploaded document becomes searchable only after its import finishes. Users should check the upload status and import schedule before reporting a missing document.\nThe public API accepts a maximum document size of 2 MB. The request limit is 60 requests per minute per workspace. Requests above this rate receive HTTP 429. The operations runbook explains how clients should retry these requests.\nDeleting a document removes it from normal search after the next successful import. Backup copies may remain until the backup retention period expires. The operations runbook defines that retention period.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.8110194802284241
+      },
+      {
+        "text": "Nimbus Notes is an application for storing and searching team documents.\nThe Starter plan supports 10 members and provides 5 GB of storage.\nThe Team plan supports 100 members and provides 100 GB of storage.\nThe Team plan includes semantic search and single sign-on.\nA workspace is a separate area for one organization. Each workspace contains projects, and each project contains documents. Members can organize documents by project so that related information is easier to find.\nThe Starter plan includes keyword search and manual document uploads. Keyword search looks for words that appear in the stored documents. It is useful when a user knows the exact term or phrase they want to find.\nSemantic search compares the meaning of a question with the meaning of document passages. A question about changing credentials may find a passage about resetting a password even when the wording is different. Related passages do not always contain the answer.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7988049983978271
+      },
+      {
+        "text": "Nimbus Notes has three workspace roles: Owner, Editor and Viewer.\nOwners manage members and workspace settings.\nEditors create and update documents.\nViewers can read documents but cannot modify them.\nMulti-factor authentication is required for Owners.\nData in transit uses TLS 1.2 or later.\nData at rest uses AES-256 encryption.\nAudit logs are retained for 180 days.\nAPI keys must never be committed to Git.\nSingle sign-on delegates authentication to the organization's identity provider. It centralizes account access and makes employee offboarding easier. The product guide identifies which plans include single sign-on.\nAuthentication checks who a person is. Authorization determines what that person is allowed to do. Successfully signing in does not automatically grant permission to edit documents or manage workspace members.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7505413293838501
+      },
+      {
+        "text": "Nimbus Notes document backups run every day at 02:00 UTC.\nBackups are retained for 14 days.\nThe recovery point objective is 24 hours.\nThe recovery time objective is 4 hours.\nThe recovery point objective describes the targeted maximum amount of recent data that could be lost after a failure.\nThe recovery time objective describes the targeted time to restore the service.\nAn Owner must submit a support request to recover a deleted document.\nOperations checks whether a suitable backup exists before attempting recovery.\nA restore drill is performed once every month.\nWhen an API request receives HTTP 429, the client should honor the Retry-After response header. If the header is absent, the client should use exponential backoff with jitter. Backoff increases the delay between retries, while jitter adds a random delay.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7281667590141296
+      },
+      {
+        "text": "Document permissions must be checked before search results are returned to a user. A document must not become visible merely because its content closely matches the user's question. Search relevance does not override access restrictions.\nAPI keys should be stored in environment variables or a secret manager. If a key is exposed, revoke it immediately, create a replacement and review audit logs for suspicious activity. Removing the key from a source file does not revoke it.\nOwners must review workspace membership at least once every quarter. During employee offboarding, an Owner removes workspace membership and disables access through the identity provider. Document ownership should be transferred to another employee when necessary.\nAudit logs record sign-ins, member changes and document deletions. Audit logs provide a history of activity, while backups contain copies of document data for recovery. Their retention periods are different and should not be confused.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7144571542739868
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "category": "unanswerable",
+    "query": "Who is the CEO of Nimbus Notes?",
+    "chunk_size": 1000,
+    "top_k": 5,
+    "evidence_recall": null,
+    "missing_evidence": [],
+    "context_characters": 4458,
+    "results": [
+      {
+        "text": "Nimbus Notes has three workspace roles: Owner, Editor and Viewer.\nOwners manage members and workspace settings.\nEditors create and update documents.\nViewers can read documents but cannot modify them.\nMulti-factor authentication is required for Owners.\nData in transit uses TLS 1.2 or later.\nData at rest uses AES-256 encryption.\nAudit logs are retained for 180 days.\nAPI keys must never be committed to Git.\nSingle sign-on delegates authentication to the organization's identity provider. It centralizes account access and makes employee offboarding easier. The product guide identifies which plans include single sign-on.\nAuthentication checks who a person is. Authorization determines what that person is allowed to do. Successfully signing in does not automatically grant permission to edit documents or manage workspace members.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.8286985158920288
+      },
+      {
+        "text": "Nimbus Notes is an application for storing and searching team documents.\nThe Starter plan supports 10 members and provides 5 GB of storage.\nThe Team plan supports 100 members and provides 100 GB of storage.\nThe Team plan includes semantic search and single sign-on.\nA workspace is a separate area for one organization. Each workspace contains projects, and each project contains documents. Members can organize documents by project so that related information is easier to find.\nThe Starter plan includes keyword search and manual document uploads. Keyword search looks for words that appear in the stored documents. It is useful when a user knows the exact term or phrase they want to find.\nSemantic search compares the meaning of a question with the meaning of document passages. A question about changing credentials may find a passage about resetting a password even when the wording is different. Related passages do not always contain the answer.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.8099015951156616
+      },
+      {
+        "text": "Nimbus Notes document backups run every day at 02:00 UTC.\nBackups are retained for 14 days.\nThe recovery point objective is 24 hours.\nThe recovery time objective is 4 hours.\nThe recovery point objective describes the targeted maximum amount of recent data that could be lost after a failure.\nThe recovery time objective describes the targeted time to restore the service.\nAn Owner must submit a support request to recover a deleted document.\nOperations checks whether a suitable backup exists before attempting recovery.\nA restore drill is performed once every month.\nWhen an API request receives HTTP 429, the client should honor the Retry-After response header. If the header is absent, the client should use exponential backoff with jitter. Backoff increases the delay between retries, while jitter adds a random delay.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7712526917457581
+      },
+      {
+        "text": "Document permissions must be checked before search results are returned to a user. A document must not become visible merely because its content closely matches the user's question. Search relevance does not override access restrictions.\nAPI keys should be stored in environment variables or a secret manager. If a key is exposed, revoke it immediately, create a replacement and review audit logs for suspicious activity. Removing the key from a source file does not revoke it.\nOwners must review workspace membership at least once every quarter. During employee offboarding, an Owner removes workspace membership and disables access through the identity provider. Document ownership should be transferred to another employee when necessary.\nAudit logs record sign-ins, member changes and document deletions. Audit logs provide a history of activity, while backups contain copies of document data for recovery. Their retention periods are different and should not be confused.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7269021272659302
+      },
+      {
+        "text": "The Enterprise plan supports 1000 members and provides 1 TB of storage. It includes all Team features, audit-log export and a dedicated support contact. Subscription prices are not specified in these documents.\nScheduled imports run every 30 minutes on Team and Enterprise. An uploaded document becomes searchable only after its import finishes. Users should check the upload status and import schedule before reporting a missing document.\nThe public API accepts a maximum document size of 2 MB. The request limit is 60 requests per minute per workspace. Requests above this rate receive HTTP 429. The operations runbook explains how clients should retry these requests.\nDeleting a document removes it from normal search after the next successful import. Backup copies may remain until the backup retention period expires. The operations runbook defines that retention period.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7237515449523926
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "category": "unanswerable",
+    "query": "Which AWS region hosts Nimbus Notes?",
+    "chunk_size": 1000,
+    "top_k": 5,
+    "evidence_recall": null,
+    "missing_evidence": [],
+    "context_characters": 4458,
+    "results": [
+      {
+        "text": "Nimbus Notes has three workspace roles: Owner, Editor and Viewer.\nOwners manage members and workspace settings.\nEditors create and update documents.\nViewers can read documents but cannot modify them.\nMulti-factor authentication is required for Owners.\nData in transit uses TLS 1.2 or later.\nData at rest uses AES-256 encryption.\nAudit logs are retained for 180 days.\nAPI keys must never be committed to Git.\nSingle sign-on delegates authentication to the organization's identity provider. It centralizes account access and makes employee offboarding easier. The product guide identifies which plans include single sign-on.\nAuthentication checks who a person is. Authorization determines what that person is allowed to do. Successfully signing in does not automatically grant permission to edit documents or manage workspace members.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7995991706848145
+      },
+      {
+        "text": "Nimbus Notes is an application for storing and searching team documents.\nThe Starter plan supports 10 members and provides 5 GB of storage.\nThe Team plan supports 100 members and provides 100 GB of storage.\nThe Team plan includes semantic search and single sign-on.\nA workspace is a separate area for one organization. Each workspace contains projects, and each project contains documents. Members can organize documents by project so that related information is easier to find.\nThe Starter plan includes keyword search and manual document uploads. Keyword search looks for words that appear in the stored documents. It is useful when a user knows the exact term or phrase they want to find.\nSemantic search compares the meaning of a question with the meaning of document passages. A question about changing credentials may find a passage about resetting a password even when the wording is different. Related passages do not always contain the answer.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7804772853851318
+      },
+      {
+        "text": "Nimbus Notes document backups run every day at 02:00 UTC.\nBackups are retained for 14 days.\nThe recovery point objective is 24 hours.\nThe recovery time objective is 4 hours.\nThe recovery point objective describes the targeted maximum amount of recent data that could be lost after a failure.\nThe recovery time objective describes the targeted time to restore the service.\nAn Owner must submit a support request to recover a deleted document.\nOperations checks whether a suitable backup exists before attempting recovery.\nA restore drill is performed once every month.\nWhen an API request receives HTTP 429, the client should honor the Retry-After response header. If the header is absent, the client should use exponential backoff with jitter. Backoff increases the delay between retries, while jitter adds a random delay.",
+        "metadata": {
+          "source": "operations_runbook.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 1,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7699017524719238
+      },
+      {
+        "text": "The Enterprise plan supports 1000 members and provides 1 TB of storage. It includes all Team features, audit-log export and a dedicated support contact. Subscription prices are not specified in these documents.\nScheduled imports run every 30 minutes on Team and Enterprise. An uploaded document becomes searchable only after its import finishes. Users should check the upload status and import schedule before reporting a missing document.\nThe public API accepts a maximum document size of 2 MB. The request limit is 60 requests per minute per workspace. Requests above this rate receive HTTP 429. The operations runbook explains how clients should retry these requests.\nDeleting a document removes it from normal search after the next successful import. Backup copies may remain until the backup retention period expires. The operations runbook defines that retention period.",
+        "metadata": {
+          "source": "product_guide.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7128833532333374
+      },
+      {
+        "text": "Document permissions must be checked before search results are returned to a user. A document must not become visible merely because its content closely matches the user's question. Search relevance does not override access restrictions.\nAPI keys should be stored in environment variables or a secret manager. If a key is exposed, revoke it immediately, create a replacement and review audit logs for suspicious activity. Removing the key from a source file does not revoke it.\nOwners must review workspace membership at least once every quarter. During employee offboarding, an Owner removes workspace membership and disables access through the identity provider. Document ownership should be transferred to another employee when necessary.\nAudit logs record sign-ins, member changes and document deletions. Audit logs provide a history of activity, while backups contain copies of document data for recovery. Their retention periods are different and should not be confused.",
+        "metadata": {
+          "source": "security_policy.txt",
+          "type": "text",
+          "page": null,
+          "chunk_id": 2,
+          "chunk_size": 1000
+        },
+        "similarity_score": 0.7089115381240845
+      }
+    ]
+  }
+]

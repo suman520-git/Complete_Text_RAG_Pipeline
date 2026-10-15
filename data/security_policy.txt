@@ -1,0 +1,31 @@
+Nimbus Notes has three workspace roles: Owner, Editor and Viewer.
+
+Owners manage members and workspace settings.
+
+Editors create and update documents.
+
+Viewers can read documents but cannot modify them.
+
+Multi-factor authentication is required for Owners.
+
+Data in transit uses TLS 1.2 or later.
+
+Data at rest uses AES-256 encryption.
+
+Audit logs are retained for 180 days.
+
+API keys must never be committed to Git.
+
+Single sign-on delegates authentication to the organization's identity provider. It centralizes account access and makes employee offboarding easier. The product guide identifies which plans include single sign-on.
+
+Authentication checks who a person is. Authorization determines what that person is allowed to do. Successfully signing in does not automatically grant permission to edit documents or manage workspace members.
+
+Document permissions must be checked before search results are returned to a user. A document must not become visible merely because its content closely matches the user's question. Search relevance does not override access restrictions.
+
+API keys should be stored in environment variables or a secret manager. If a key is exposed, revoke it immediately, create a replacement and review audit logs for suspicious activity. Removing the key from a source file does not revoke it.
+
+Owners must review workspace membership at least once every quarter. During employee offboarding, an Owner removes workspace membership and disables access through the identity provider. Document ownership should be transferred to another employee when necessary.
+
+Audit logs record sign-ins, member changes and document deletions. Audit logs provide a history of activity, while backups contain copies of document data for recovery. Their retention periods are different and should not be confused.
+
+Security incident reports should include the workspace identifier, the approximate incident time and a description of the observed behavior. Reports must not contain passwords, API keys or complete copies of confidential documents.
